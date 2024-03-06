@@ -56,6 +56,14 @@
   border: 1px solid #282c34;
 }
 
+.correct {
+  background-color: green;
+}
 
+.incorrect {
+  background-color: gray;
+}
 
-
+.wrongPlace {
+  background-color: yellow;
+}
