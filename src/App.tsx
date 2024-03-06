@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Line from "./Line";
+import "./App.css";
+
+const WORDL_URL = "https://random-word-api.vercel.app/api?words=10&length=5";
+const MAX_ATTEMPTS = 6;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [randomWord, setRandomWord] = useState("");
+	const [guesses, setGuesses] = useState(Array(MAX_ATTEMPTS).fill(null));
+
+	useEffect(() => {
+		const getWords = async () => {
+			const response = await fetch(WORDL_URL);
+			const words = await response.json();
+			const randomWord = words[Math.floor(Math.random() * words.length)];
+			console.log(randomWord);
+			setRandomWord(randomWord);
+		};
+
+		getWords();
+	}, []);
+
+	return (
+		<div className="App">
+			<h1>Wordl</h1>
+			<div className="board">
+				{guesses.map((guess: string) => {
+					return <Line guess={guess || ""} />;
+				})}
+			</div>
+		</div>
+	);
 }
 
 export default App;
