@@ -2,6 +2,8 @@
 
 This is a personal project, built for fun by @gulnara. The original Wordle game can be found on [nytimes page](https://www.nytimes.com/games/wordle/index.html).
 
+You can play with copycat [here](https://wordle-copycat.vercel.app/).
+
 ## Available Scripts
 
 In the project directory, you can run:
