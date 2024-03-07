@@ -111,7 +111,16 @@ function App() {
 					>
 						@gulnara
 					</a>
-					. The original Wordle game can be found on{" "}
+					. The repo can be found{" "}
+					<a
+						href="https://github.com/gulnara/wordle-copycat"
+						target="_blank"
+						rel="noreferrer"
+					>
+						here
+					</a>
+					. <br />
+					The original Wordle game can be found on{" "}
 					<a
 						href="https://www.nytimes.com/games/wordle/index.html"
 						target="_blank"

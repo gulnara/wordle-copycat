@@ -61,15 +61,15 @@
 }
 
 .correct {
-  background-color: green;
+  background-color:#88d8b0;
 }
 
 .incorrect {
-  background-color: gray;
+  background-color: lightgrey;
 }
 
 .wrongPlace {
-  background-color: yellow;
+  background-color: #ffcc5c;
 }
 
 .disclaimer{
@@ -81,5 +81,9 @@
 
 a{
   text-decoration: none;
-  color: green;
+  color: #88d8b0;
+}
+
+h1 {
+  color: #ffcc5c;
 }
